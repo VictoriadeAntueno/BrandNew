@@ -9,6 +9,11 @@ import { LogoAPComponent } from './components/logo-ap/logo-ap.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
+import { ExpComponent } from './components/exp/exp.component';
+import { EduComponent } from './components/edu/edu.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { PoryComponent } from './components/pory/pory.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +23,11 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
     HeaderComponent,
     BannerComponent,
     AcercaDeComponent,
+    ExpComponent,
+    EduComponent,
+    SkillsComponent,
+    PoryComponent,
+    FooterComponent,
     
   ],
   imports: [
