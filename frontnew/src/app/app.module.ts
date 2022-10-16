@@ -16,6 +16,7 @@ import { PoryComponent } from './components/pory/pory.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { interceptorProvider } from './service/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,9 @@ import { HomeComponent } from './components/home/home.component';
     ReactiveFormsModule,
     FormsModule, 
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
