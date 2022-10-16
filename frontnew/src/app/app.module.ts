@@ -14,6 +14,8 @@ import { EduComponent } from './components/edu/edu.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { PoryComponent } from './components/pory/pory.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SkillsComponent,
     PoryComponent,
     FooterComponent,
+    LoginComponent,
+    HomeComponent,   
     
   ],
   imports: [
