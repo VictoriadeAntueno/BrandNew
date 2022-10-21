@@ -10,13 +10,18 @@ import { HeaderComponent } from './components/header/header.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExpComponent } from './components/exp/exp.component';
-import { EduComponent } from './components/edu/edu.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { PoryComponent } from './components/pory/pory.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './components/exp/new-experiencia.component';
+import { NeweducacionComponent } from './components/edu/neweducacion.component';
+import { EditeducacionComponent } from './components/edu/editeducacion.component';
+import { CommonModule } from '@angular/common';
+import { EducacionComponent } from './components/edu/educacion.component';
+
 
 @NgModule({
   declarations: [
@@ -26,13 +31,16 @@ import { interceptorProvider } from './service/interceptor-service';
     HeaderComponent,
     BannerComponent,
     AcercaDeComponent,
-    ExpComponent,
-    EduComponent,
+    ExpComponent,    
     SkillsComponent,
     PoryComponent,
     FooterComponent,
     LoginComponent,
-    HomeComponent,   
+    HomeComponent,
+    NewExperienciaComponent,
+    NeweducacionComponent,
+    EditeducacionComponent,
+    EducacionComponent,   
     
   ],
   imports: [
@@ -41,6 +49,8 @@ import { interceptorProvider } from './service/interceptor-service';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule, 
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [
     interceptorProvider
