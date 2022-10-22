@@ -21,6 +21,11 @@ import { NeweducacionComponent } from './components/edu/neweducacion.component';
 import { EditeducacionComponent } from './components/edu/editeducacion.component';
 import { CommonModule } from '@angular/common';
 import { EducacionComponent } from './components/edu/educacion.component';
+import { EditSkillComponent } from './components/skills/edit-skill.component';
+import { NewSkillComponent } from './components/skills/new-skill.component';
+import { EditExperienciaComponent } from './components/exp/edit-experiencia.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
 
 
 @NgModule({
@@ -40,7 +45,11 @@ import { EducacionComponent } from './components/edu/educacion.component';
     NewExperienciaComponent,
     NeweducacionComponent,
     EditeducacionComponent,
-    EducacionComponent,   
+    EducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent,
+    EditExperienciaComponent,
+    EditAcercaDeComponent,   
     
   ],
   imports: [
@@ -50,7 +59,9 @@ import { EducacionComponent } from './components/edu/educacion.component';
     ReactiveFormsModule,
     FormsModule, 
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    NgCircleProgressModule.forRoot({}),
+    
   ],
   providers: [
     interceptorProvider

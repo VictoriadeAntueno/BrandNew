@@ -2,58 +2,35 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.vito.backnew.entity;
+package com.vito.backnew.dtointerface;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotBlank;
 
 /**
  *
  * @author Usuario
  */
-@Entity
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    
-    @NotNull
-    @Size(min = 1, max = 500, message = "no cumple con la longitud")
+public class dtoPersona {
+    @NotBlank
     private String nombre;
-    
-    @NotNull
-    @Size(min = 1, max = 500, message = "no cumple con la longitud")
+    @NotBlank
     private String apellido;
-    
+    @NotBlank
     private String img;
-
-    @Size(min = 1, max = 500, message = "no cumple con la longitud")
+    @NotBlank
     private String prof;
-    
-    @NotNull
+    @NotBlank
     private String descripcion;
 
-    public Persona() {
+    public dtoPersona() {
     }
 
-    public Persona(String nombre, String apellido, String img, String prof, String descripcion) {
+    public dtoPersona(String nombre, String apellido, String img, String prof, String descripcion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
         this.prof = prof;
         this.descripcion = descripcion;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -95,8 +72,6 @@ public class Persona {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
-    
     
     
 }
