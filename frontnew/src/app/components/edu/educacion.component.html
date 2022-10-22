@@ -1,11 +1,16 @@
 <div class="row">
-  <h1>Educacion</h1>
-  <div class="col-lg-2">
-      <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
-          Agregar Educacion
+  <h2 class="text-center">
+    Educación
+  </h2>
+  <br>
+  <div>
+    <div class="col-12 text-center">
+      <button type="button" class="btn btn-outline-success">
+        <strong>Si te viera Freire... <br></strong> Apretá acá para agregar eso nuevo que aprendiste<br>
+        <i class="bi bi-plus-circle"></i>           
       </button>
-  </div>
-
+    </div>
+<br>
   <div class="col lg 1"></div>
   <div class="col-lg-11">
       <table class="table">
@@ -14,14 +19,14 @@
                   <td>
                       <h2>{{Educacion.nombreE}}</h2>
                   </td>
-                  <td>{{Educacion.descripcionE}}</td>
+                  <td> <h4>{{Educacion.descripcionE}}</h4></td>
                   <td *ngIf="isLogged">
                       <button class="btn btn-outline-danger" routerLink="/editedu/{{Educacion.id}}">
-                          <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                          <i class="bi bi-pencil-fill"></i> </button>
                   </td>
                   <td *ngIf="isLogged">
                       <button class="btn btn-danger" (click)="delete(Educacion.id)">
-                          <i class="bi bi-trash-fill"></i> BORRAR</button>
+                          <i class="bi bi-trash-fill"></i> </button>
                   </td>
               </tr>
           </tbody>
