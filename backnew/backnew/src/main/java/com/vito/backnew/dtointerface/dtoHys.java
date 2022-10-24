@@ -13,24 +13,24 @@ import javax.validation.constraints.NotBlank;
 
 public class dtoHys {
     @NotBlank
-    private String name;
+    private String nombre;
     @NotBlank
     private int porcentaje;
 
     public dtoHys() {
     }
 
-    public dtoHys(String name, int porcentaje) {
-        this.name = name;
+    public dtoHys(String nombre, int porcentaje) {
+        this.nombre = nombre;
         this.porcentaje = porcentaje;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public int getPorcentaje() {
@@ -40,6 +40,7 @@ public class dtoHys {
     public void setPorcentaje(int porcentaje) {
         this.porcentaje = porcentaje;
     }
+
     
     
 }

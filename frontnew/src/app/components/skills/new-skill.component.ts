@@ -17,14 +17,14 @@ export class NewSkillComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onCreate(): void {
+  onCreate(): void{
     const skill = new Skill(this.nombre, this.porcentaje);
-    this.skillS.save(skill).subscribe (
+    this.skillS.save(skill).subscribe(
       data => {
-        alert("Skill creada correctamente!!!!");
+        alert("Skill creada correctamente");
         this.router.navigate(['']);
-      }, err => {
-        alert("No pude che! chequea tu código");
+      }, err =>{
+        alert("Fallo al añadir la skill");
         this.router.navigate(['']);
       }
     )

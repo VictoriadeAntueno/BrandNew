@@ -23,10 +23,9 @@
           <div class="card-header">{{Experiencia.nombreE}}</div>
           <div class="card-body">
             <h4 class="card-title">{{Experiencia.descripcionE}}</h4>
-            <p class="card-text">{{Experiencia.puestoE}}</p>
-           
+            <p class="card-text">{{Experiencia.puestoE}}</p>           
           </div>
-          <div class="col-12 text-center"> 
+          
             <td *ngIf="isLogged">
               <button  class="btn btn-outline-danger" routerLink="/editexp/{{Experiencia.id}}">
                   <i  class="bi bi-pencil-fill"></i> </button>
@@ -36,10 +35,10 @@
                   <i  class="bi bi-trash-fill"></i> </button>
           </td>
         </div>
-        </div>
+      
         
       <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
-        
+        <br>
       </div>
       
     </div>

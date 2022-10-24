@@ -1,0 +1,43 @@
+<div class="alert alert-dismissible alert-warning">
+    <h2 class="text-center">
+      Proyectos
+    </h2>
+  
+  <div>
+    <div class="col-12 text-center">
+      <button type="button" class="btn btn-outline-success"  routerLink="/nuevaproy" *ngIf="isLogged">
+      <strong>¡Bien ahi! Un nuevo proyecto terminado <br></strong> Apreta por acá y lo sumamos<br>
+        <i class="bi bi-plus-circle"></i>           
+      </button>
+    </div>
+    <br>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+          
+        </div>
+        <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+          <div class="card border-warning" *ngFor="let Proyecto of proyecto">
+            <div class="card-header">{{Proyecto.nombreP}}</div>
+            <div class="card-body">
+              <h4 class="card-title">{{Proyecto.descripcionP}}</h4>
+                        
+            </div>
+            <div class="col-12 text-center"> 
+              <td *ngIf="isLogged">
+                <button  class="btn btn-outline-danger" routerLink="/editproy/{{Proyecto.id}}">
+                    <i  class="bi bi-pencil-fill"></i> </button>
+            </td>
+            <td *ngIf="isLogged">
+                <button  class="btn btn-danger" (click)="delete(Proyecto.id)">
+                    <i  class="bi bi-trash-fill"></i> </button>
+            </td>
+          </div>
+          </div>
+          
+        <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+          
+        </div>
+      </div>
+    </div>
+  

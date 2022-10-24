@@ -13,7 +13,7 @@ export class SkillsComponent implements OnInit {
 
   constructor(private skillS: SkillService, private tokenService: TokenService) { }
   isLogged = false;
-
+  
   ngOnInit(): void {
     this.cargarSkills();
     if(this.tokenService.getToken()){
@@ -23,7 +23,7 @@ export class SkillsComponent implements OnInit {
     }
   }
 
-  cargarSkills(): void {
+  cargarSkills(): void{
     this.skillS.lista().subscribe(
       data => {
         this.skill = data;

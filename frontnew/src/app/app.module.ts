@@ -11,7 +11,6 @@ import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExpComponent } from './components/exp/exp.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { PoryComponent } from './components/pory/pory.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
@@ -29,6 +28,10 @@ import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.com
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { ProyectoComponent } from './components/proyecto/proyecto.component';
+import { NewproyectoComponent } from './components/proyecto/newproyecto.component';
+import { EditproyectoComponent } from './components/proyecto/editproyecto.component';
+
 
 
 @NgModule({
@@ -40,8 +43,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     BannerComponent,
     AcercaDeComponent,
     ExpComponent,    
-    SkillsComponent,
-    PoryComponent,
+    SkillsComponent,    
     FooterComponent,
     LoginComponent,
     HomeComponent,
@@ -52,7 +54,11 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     EditSkillComponent,
     NewSkillComponent,
     EditExperienciaComponent,
-    EditAcercaDeComponent,   
+    EditAcercaDeComponent,
+    ProyectoComponent,
+    NewproyectoComponent,
+    EditproyectoComponent,
+     
     
   ],
   imports: [
