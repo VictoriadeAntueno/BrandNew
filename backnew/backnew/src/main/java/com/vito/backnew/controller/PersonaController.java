@@ -4,7 +4,6 @@
  */
 package com.vito.backnew.controller;
 
-
 import com.vito.backnew.dtointerface.dtoPersona;
 import com.vito.backnew.entity.Persona;
 import com.vito.backnew.security.controller.Mensaje;
@@ -21,7 +20,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.apache.commons.lang3.StringUtils;
-
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  *
@@ -29,12 +29,12 @@ import org.apache.commons.lang3.StringUtils;
  */
 @RestController
 @RequestMapping("/personas")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://vitofront.web.app")
 public class PersonaController {
 
     @Autowired
     ImpPersonaService personaService;
-    
+
     @GetMapping("/lista")
     public ResponseEntity<List<Persona>> list() {
         List<Persona> list = personaService.list();
@@ -51,7 +51,7 @@ public class PersonaController {
         return new ResponseEntity(persona, HttpStatus.OK);
     }
 
-   /* @DeleteMapping("/delete/{id}")
+    /* @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         if (!personaService.existsById(id)) {
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
@@ -60,7 +60,7 @@ public class PersonaController {
         return new ResponseEntity(new Mensaje("Persona eliminada"), HttpStatus.OK);
     }*/
 
-    /*@PostMapping("/create")
+ /* @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoPersona dtopersona) {
         if (StringUtils.isBlank(dtopersona.getNombre())) {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
@@ -74,13 +74,18 @@ public class PersonaController {
                 dtopersona.getApellido(),
                 dtopersona.getImg(),
                 dtopersona.getProf(),
-                dtopersona.getDescripcion(),
+                dtopersona.getDescripcion()
                         );
         
         personaService.save(persona);
         return new ResponseEntity(new Mensaje("persona creada"), HttpStatus.OK);
 
     }*/
+    @PostMapping("/crear")
+    public String createPersona(@RequestBody Persona persona) {
+        personaService.save(persona);
+        return "La persona fue creada correctamente";
+    }
 
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoPersona dtopersona) {
@@ -97,7 +102,7 @@ public class PersonaController {
         Persona persona = personaService.getOne(id).get();
 
         persona.setNombre(dtopersona.getNombre());
-        persona.setApellido(dtopersona.getApellido());        
+        persona.setApellido(dtopersona.getApellido());
         persona.setImg(dtopersona.getImg());
         persona.setProf(dtopersona.getProf());
         persona.setDescripcion(dtopersona.getDescripcion());
